@@ -17,7 +17,7 @@ jobs:
       - uses: Tech-Byte-Frontier/jevgate-action@v1
         with:
           api-key: ${{ secrets.TYPESAFE_API_KEY }}
-          version: 0.22.0
+          version: 0.25.0
 ```
 
 The action installs a release binary (checked against its SHA-256), keeps JevGate's answer cache in the Actions cache so unchanged code costs nothing, and runs `jevgate check --base <pull request base> --format github`. It needs no Rust toolchain and runs on Linux, macOS and Windows runners.
