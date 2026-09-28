@@ -6,15 +6,19 @@ branding:
   color: blue
 inputs:
   api-key:
-    description: TypeSafe API key, usually secrets.TYPESAFE_API_KEY. Pull requests from forks don't receive secrets.
+    description: API key, usually secrets.TYPESAFE_API_KEY; `api-key-kind` says which service issued it. Pull requests from forks don't receive secrets.
     required: false
     default: ""
+  api-key-kind:
+    description: Which service issued `api-key`, `typesafe`, `openrouter` (OpenRouter) or `vercel` (Vercel AI Gateway). The gateways need JevGate 0.26.0 or later.
+    required: false
+    default: typesafe
   version:
     description: JevGate version to install, such as 0.17.0, or `latest`. Pin one for repeatable results.
     required: false
     default: latest
   base:
-    description: Review only files changed since this revision. Defaults to the pull request's base commit; empty on other events, which review the whole repository.
+    description: Review only what changed since this revision. JevGate 0.26.0 and later ask about and report only the changed lines of changed files (add `--whole-files` to `args` for whole files); earlier versions review changed files whole. Defaults to the pull request's base commit; empty on other events, which review the whole repository.
     required: false
     default: ""
   args:
@@ -29,6 +33,10 @@ inputs:
     description: Also write the findings as SARIF to this path, for github/codeql-action/upload-sarif. Replays the check from its cached answers, so it costs nothing. Needs JevGate 0.18.0 or later.
     required: false
     default: ""
+  comment:
+    description: "On pull requests, list every finding in one comment, updated in place on each run. Needs `pull-requests: write`; without it, as on pull requests from forks, the run says so and carries on."
+    required: false
+    default: "true"
   cache:
     description: Keep answers in the Actions cache, so unchanged code costs nothing on the next run.
     required: false
@@ -52,6 +60,13 @@ runs:
       env:
         JEVGATE_VERSION: ${{ inputs.version }}
       run: bash "$GITHUB_ACTION_PATH/install.sh"
+    # Answers a pull request commits under .jevgate/cache could clear its
+    # own code; JevGate 0.28 and later never reads a cache file Git tracks,
+    # and this keeps earlier versions from reading one too.
+    - name: Leave out answers the change committed
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: rm -rf .jevgate/cache
     - name: Restore answers
       if: inputs.cache == 'true'
       uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -64,9 +79,27 @@ runs:
       shell: bash
       working-directory: ${{ inputs.working-directory }}
       env:
-        TYPESAFE_API_KEY: ${{ inputs.api-key }}
+        API_KEY: ${{ inputs.api-key }}
+        API_KEY_KIND: ${{ inputs.api-key-kind }}
         BASE: ${{ inputs.base || github.event.pull_request.base.sha }}
         FORMAT: ${{ inputs.format }}
         ARGS: ${{ inputs.args }}
         SARIF_FILE: ${{ inputs.sarif-file }}
       run: bash "$GITHUB_ACTION_PATH/check.sh"
+    # After a failed gate or an incomplete run too; not when the check never started.
+    - name: Comment
+      if: ${{ !cancelled() && inputs.comment == 'true' && steps.check.outputs.exit-code != '' }}
+      uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+      env:
+        JEVGATE_ACTION_PATH: ${{ github.action_path }}
+        JEVGATE_EXIT_CODE: ${{ steps.check.outputs.exit-code }}
+        JEVGATE_REPORT: ${{ steps.check.outputs.comment-report }}
+        JEVGATE_COMMIT: ${{ steps.check.outputs.commit }}
+        JEVGATE_PREFIX: ${{ steps.check.outputs.prefix }}
+        JEVGATE_VERSION: ${{ steps.check.outputs.version }}
+        JEVGATE_WORKING_DIRECTORY: ${{ inputs.working-directory }}
+      with:
+        retries: 3
+        script: |
+          const comment = require(require('node:path').join(process.env.JEVGATE_ACTION_PATH, 'comment.cjs'));
+          await comment.run({ github, context, core });

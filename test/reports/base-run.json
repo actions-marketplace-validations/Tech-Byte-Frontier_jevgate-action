@@ -1,0 +1,1510 @@
+{
+ "quick": false,
+ "base_revision": "811595e449683e3ef96375d48cb97885a80c9d6f",
+ "deleted_files": [],
+ "schema_version": 2,
+ "command": "check",
+ "rubric_version": "jevgate-units-v1",
+ "root": "/home/runner/work/jevgate/jevgate",
+ "generation": 21,
+ "watcher_pid": null,
+ "errors": [],
+ "generated_at": 1790372499,
+ "status": "review",
+ "complete": true,
+ "judgments_complete": false,
+ "acceptance_evaluated": false,
+ "dry_run": false,
+ "requested_model": "jev-1.13.0",
+ "decision_policy": {
+  "clear_probability": 0.8,
+  "consider_leading_probability": 0.5,
+  "consider_probability": 0.8,
+  "deep_nesting": 4.0,
+  "location_probability": 0.65,
+  "long_branch_chain": 4.0,
+  "min_body_lines": 5.0,
+  "min_clone_bytes": 120.0,
+  "min_clone_statements": 3.0,
+  "min_file_lines": 100.0,
+  "review_probability": 0.8
+ },
+ "fail_on": [
+  "review"
+ ],
+ "gate": {
+  "passed": false,
+  "reasons": [
+   "1 new review finding(s)"
+  ],
+  "new_findings": 2,
+  "baselined_findings": 0
+ },
+ "api_requests": 55,
+ "concurrency": 6,
+ "paid_input_tokens": 160708,
+ "paid_output_tokens": 7982,
+ "stages": {
+  "comments": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 2772,
+   "service_ms": 5972,
+   "queue_wait_ms": 11328,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 9,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 11,
+   "cached_judgments": 11,
+   "evaluated_judgments": 9,
+   "input_tokens": 41436,
+   "output_tokens": 2182,
+   "evidence_bytes": 25077
+  },
+  "constants": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 0,
+   "service_ms": 0,
+   "queue_wait_ms": 0,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 0,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 4,
+   "cached_judgments": 4,
+   "evaluated_judgments": 0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "evidence_bytes": 0
+  },
+  "duplicate-pair": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 266,
+   "service_ms": 266,
+   "queue_wait_ms": 2550,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 1,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 0,
+   "cached_judgments": 0,
+   "evaluated_judgments": 1,
+   "input_tokens": 890,
+   "output_tokens": 52,
+   "evidence_bytes": 740
+  },
+  "functions": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 3087,
+   "service_ms": 3167,
+   "queue_wait_ms": 6869,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 5,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 2,
+   "cached_judgments": 2,
+   "evaluated_judgments": 5,
+   "input_tokens": 10591,
+   "output_tokens": 380,
+   "evidence_bytes": 20754
+  },
+  "locate": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 259,
+   "service_ms": 259,
+   "queue_wait_ms": 0,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 1,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 0,
+   "cached_judgments": 0,
+   "evaluated_judgments": 1,
+   "input_tokens": 774,
+   "output_tokens": 73,
+   "evidence_bytes": 1028
+  },
+  "outline": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 3103,
+   "service_ms": 1789,
+   "queue_wait_ms": 5920,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 5,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 0,
+   "cached_judgments": 0,
+   "evaluated_judgments": 5,
+   "input_tokens": 9441,
+   "output_tokens": 301,
+   "evidence_bytes": 16645
+  },
+  "recheck": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 880,
+   "service_ms": 4496,
+   "queue_wait_ms": 1643,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 10,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 4,
+   "cached_judgments": 4,
+   "evaluated_judgments": 10,
+   "input_tokens": 23892,
+   "output_tokens": 516,
+   "evidence_bytes": 61331
+  },
+  "security": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 3555,
+   "service_ms": 3529,
+   "queue_wait_ms": 9453,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 5,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 6,
+   "cached_judgments": 6,
+   "evaluated_judgments": 5,
+   "input_tokens": 24113,
+   "output_tokens": 2154,
+   "evidence_bytes": 16718
+  },
+  "tests": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 3676,
+   "service_ms": 3569,
+   "queue_wait_ms": 24992,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 10,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 1,
+   "cached_judgments": 1,
+   "evaluated_judgments": 10,
+   "input_tokens": 13403,
+   "output_tokens": 800,
+   "evidence_bytes": 8626
+  },
+  "trace": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 1533,
+   "service_ms": 2614,
+   "queue_wait_ms": 0,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 5,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 2,
+   "cached_judgments": 2,
+   "evaluated_judgments": 5,
+   "input_tokens": 21859,
+   "output_tokens": 740,
+   "evidence_bytes": 58200
+  },
+  "values": {
+   "planned_requests": 0,
+   "planned_evidence_bytes": 0,
+   "elapsed_ms": 2270,
+   "service_ms": 2546,
+   "queue_wait_ms": 5162,
+   "planned_tokens": 0,
+   "planned_cached": 0,
+   "successful_requests": 4,
+   "failed_attempts": 0,
+   "retries": 0,
+   "cache_hits": 3,
+   "cached_judgments": 3,
+   "evaluated_judgments": 4,
+   "input_tokens": 14309,
+   "output_tokens": 784,
+   "evidence_bytes": 15850
+  }
+ },
+ "settled": true,
+ "files": [
+  {
+   "path": "src/github.rs",
+   "role": "source",
+   "status": "uncertain",
+   "cached": false,
+   "model": "jev-1.13.0",
+   "error": null,
+   "findings": [],
+   "dimensions": {
+    "comments": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "7 comments judged: 7 clear.",
+     "rule_version": "2",
+     "units": {
+      "judged": 7,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 7,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "file_organization": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "1 outline judged: 1 clear.",
+     "rule_version": "18",
+     "units": {
+      "judged": 1,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 1,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "function_simplification": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "3 functions judged: 3 clear. 4 functions too small to judge.",
+     "rule_version": "14",
+     "units": {
+      "judged": 3,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 3,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 4,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "hardcoded_values": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "7 value units judged: 7 clear.",
+     "rule_version": "4",
+     "units": {
+      "judged": 7,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 7,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "injection": {
+     "status": "uncertain",
+     "concern_probability": 0.9,
+     "decision_basis": "7 security units judged: 6 clear, 1 uncertain.",
+     "rule_version": "6",
+     "units": {
+      "judged": 7,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 6,
+      "uncertain": 1,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "sensitive_data": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "7 security units judged: 7 clear.",
+     "rule_version": "5",
+     "units": {
+      "judged": 7,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 7,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "shared_logic": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No candidate pairs to judge.",
+     "rule_version": "19",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "test_redundancy": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No test pairs to judge.",
+     "rule_version": "3",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "test_value": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "2 tests judged: 2 clear.",
+     "rule_version": "5",
+     "units": {
+      "judged": 2,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 2,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "unsafe_settings": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "7 security units judged: 7 clear.",
+     "rule_version": "4",
+     "units": {
+      "judged": 7,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 7,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    }
+   },
+   "input_tokens": 32716,
+   "output_tokens": 2213
+  },
+  {
+   "path": "src/options/commands.rs",
+   "role": "source",
+   "status": "uncertain",
+   "cached": false,
+   "model": "jev-1.13.0",
+   "error": null,
+   "findings": [
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 1,
+     "message": "This file's top-level code has a comment to clean up: at line 1 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": null,
+     "rule_version": "2",
+     "concern_probability": 0.98,
+     "locations": [
+      {
+       "path": "src/options/commands.rs",
+       "start_line": 1,
+       "end_line": 1,
+       "symbol": "top-level code"
+      }
+     ],
+     "quote": "//! The subcommands, the baseline actions and their help text.\n",
+     "fingerprint": "5fb29bb3e2212df289b9748c9fd60c1599b13459df84a0400841d985e5a18823",
+     "rank": 0.6792842369487464,
+     "baselined": false
+    }
+   ],
+   "dimensions": {
+    "comments": {
+     "status": "note",
+     "concern_probability": 0.98,
+     "decision_basis": "26 comments judged: 1 note, 25 clear.",
+     "rule_version": "2",
+     "units": {
+      "judged": 26,
+      "review": 0,
+      "consider": 0,
+      "note": 1,
+      "clear": 25,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "file_organization": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "1 outline judged: 1 clear.",
+     "rule_version": "18",
+     "units": {
+      "judged": 1,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 1,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "function_simplification": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No functions to judge.",
+     "rule_version": "14",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "hardcoded_values": {
+     "status": "uncertain",
+     "concern_probability": 0.37,
+     "decision_basis": "1 value unit judged: 1 uncertain.",
+     "rule_version": "4",
+     "units": {
+      "judged": 1,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 1,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "injection": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No security units to judge.",
+     "rule_version": "6",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "sensitive_data": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No security units to judge.",
+     "rule_version": "5",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "shared_logic": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No candidate pairs to judge.",
+     "rule_version": "19",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "unsafe_settings": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No security units to judge.",
+     "rule_version": "4",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    }
+   },
+   "input_tokens": 31057,
+   "output_tokens": 1318
+  },
+  {
+   "path": "src/options/mod.rs",
+   "role": "source",
+   "status": "note",
+   "cached": false,
+   "model": "jev-1.13.0",
+   "error": null,
+   "findings": [
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 1,
+     "message": "This file's top-level code has a comment to clean up: at lines 1–2 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": null,
+     "rule_version": "2",
+     "concern_probability": 0.93,
+     "locations": [
+      {
+       "path": "src/options/mod.rs",
+       "start_line": 1,
+       "end_line": 2,
+       "symbol": "top-level code"
+      }
+     ],
+     "quote": "//! The `check` arguments, output formats and gate levels; the subcommands and\n//! their help text are in `commands`.\n",
+     "fingerprint": "58c86ae408c99452fa1af1684beb3d10df53e78c32cd7ba8bb92f1a13f1ab928",
+     "rank": 1.0217094284613422,
+     "baselined": false
+    },
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 276,
+     "message": "`CheckArgs::enabled` has a comment to clean up: at line 276 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": "CheckArgs::enabled",
+     "rule_version": "2",
+     "concern_probability": 0.8900000000000001,
+     "locations": [
+      {
+       "path": "src/options/mod.rs",
+       "start_line": 276,
+       "end_line": 276,
+       "symbol": "CheckArgs::enabled"
+      }
+     ],
+     "quote": "/// Whether a rule is selected, by key or ID.\n",
+     "fingerprint": "8cbf468d2d64d25f58ccde803b1924b6d4648fe6ccd968aa1e37d19e23a2f62d",
+     "rank": 0.6169009906983514,
+     "baselined": false
+    }
+   ],
+   "dimensions": {
+    "comments": {
+     "status": "note",
+     "concern_probability": 0.93,
+     "decision_basis": "60 comments judged: 2 note, 58 clear.",
+     "rule_version": "2",
+     "units": {
+      "judged": 60,
+      "review": 0,
+      "consider": 0,
+      "note": 2,
+      "clear": 58,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "file_organization": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "1 outline judged: 1 clear.",
+     "rule_version": "18",
+     "units": {
+      "judged": 1,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 1,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "function_simplification": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "5 functions judged: 5 clear. 12 functions too small to judge.",
+     "rule_version": "14",
+     "units": {
+      "judged": 5,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 5,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 12,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "hardcoded_values": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "5 value units judged: 5 clear.",
+     "rule_version": "4",
+     "units": {
+      "judged": 5,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 5,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "injection": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "16 security units judged: 16 clear.",
+     "rule_version": "6",
+     "units": {
+      "judged": 16,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 16,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "sensitive_data": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "16 security units judged: 16 clear.",
+     "rule_version": "5",
+     "units": {
+      "judged": 16,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 16,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "shared_logic": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No candidate pairs to judge.",
+     "rule_version": "19",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "unsafe_settings": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "16 security units judged: 16 clear.",
+     "rule_version": "4",
+     "units": {
+      "judged": 16,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 16,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    }
+   },
+   "input_tokens": 82669,
+   "output_tokens": 4651
+  },
+  {
+   "path": "src/output.rs",
+   "role": "source",
+   "status": "review",
+   "cached": false,
+   "model": "jev-1.13.0",
+   "error": null,
+   "findings": [
+    {
+     "rule": "maintainability/shared-logic",
+     "strength": "review",
+     "line": 213,
+     "message": "Lines 213 and 247 of `emit_findings` (src/output.rs) perform the same steps for the same purpose (0.86). Differences: `Review ({}):`→`Notes ({}, optional):`, `review`→`notes`, `1;31`→`1`.",
+     "action": "Move the shared steps into one implementation",
+     "symbol": "Lines 213 and 247 of `emit_findings` (src/output.rs)",
+     "rule_version": "19",
+     "concern_probability": 0.86,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 213,
+       "end_line": 217,
+       "symbol": "emit_findings"
+      },
+      {
+       "path": "src/output.rs",
+       "start_line": 247,
+       "end_line": 251,
+       "symbol": "emit_findings"
+      }
+     ],
+     "quote": "let heading = format!(\"Review ({}):\", review.len());\n        writeln!(out, \"\\n{}\", style.paint(\"1;31\", &heading))?;\n        for (path, finding) in &review {\n            emit_finding(out, path, finding, style)?;\n        }",
+     "fingerprint": "c2411e834cced1c5f56c8a68b9a04e95ab9ba7bb8781e3879793745a50f202ad",
+     "rank": 2.062189934606599,
+     "baselined": false
+    },
+    {
+     "rule": "maintainability/hardcoded-values",
+     "strength": "consider",
+     "line": 331,
+     "message": "`emit_finding` likely uses a value whose meaning a reader must guess (0.87). The value is \"36\".",
+     "action": "Give the value a descriptive constant name",
+     "symbol": "emit_finding",
+     "rule_version": "4",
+     "concern_probability": 0.8700000000000001,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 331,
+       "end_line": 351,
+       "symbol": "emit_finding"
+      }
+     ],
+     "fingerprint": "496b58069e9ed18abb10136b9f3b6e4ebdd5b892b41c5c5a2131d6f8c407ced0",
+     "rank": 2.6892069344217355,
+     "baselined": false
+    },
+    {
+     "rule": "maintainability/function-simplification",
+     "strength": "note",
+     "line": 289,
+     "message": "`emit_context_load` reads well as it is; one block could be named as a helper.",
+     "action": "Optional: extract that block if it grows",
+     "symbol": "emit_context_load",
+     "rule_version": "14",
+     "concern_probability": 0.85,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 289,
+       "end_line": 327,
+       "symbol": "emit_context_load"
+      }
+     ],
+     "fingerprint": "362c563e25a7e440960c9bd2d433d974d9fd9d1a201479921f4ae916948b39a7",
+     "rank": 3.135547535996846,
+     "baselined": false
+    },
+    {
+     "rule": "maintainability/function-simplification",
+     "strength": "note",
+     "line": 256,
+     "message": "`emit_summary` reads well as it is; one block could be named as a helper.",
+     "action": "Optional: extract that block if it grows",
+     "symbol": "emit_summary",
+     "rule_version": "14",
+     "concern_probability": 0.88,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 256,
+       "end_line": 286,
+       "symbol": "emit_summary"
+      }
+     ],
+     "fingerprint": "84dce89ad1b06817330b51a91db2a8cbad9b360c057348791ff356f5e5c42448",
+     "rank": 3.0498475944637593,
+     "baselined": false
+    },
+    {
+     "rule": "maintainability/hardcoded-values",
+     "strength": "note",
+     "line": 353,
+     "message": "`emit_file` may use a value whose meaning a reader must guess; the answer was split.",
+     "action": "Optional: name or configure the value if it changes",
+     "symbol": "emit_file",
+     "rule_version": "4",
+     "concern_probability": 0.7,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 353,
+       "end_line": 386,
+       "symbol": "emit_file"
+      }
+     ],
+     "fingerprint": "744eb1bc38d3e8c0f54ae00890a7d4e77466683e5eb1252cb1e98bcec75c3e64",
+     "rank": 2.4887436430425893,
+     "baselined": false
+    },
+    {
+     "rule": "maintainability/hardcoded-values",
+     "strength": "note",
+     "line": 26,
+     "message": "`usd` has a value that could be named, though its context explains it.",
+     "action": "Optional: name or configure the value if it changes",
+     "symbol": "usd",
+     "rule_version": "4",
+     "concern_probability": 0.8400000000000001,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 26,
+       "end_line": 28,
+       "symbol": "usd"
+      }
+     ],
+     "fingerprint": "b2f2cf1e5db49630ef53b471139ab8e8be7e8fa3f02b5017f99c4980c2c3beba",
+     "rank": 1.1644872633407082,
+     "baselined": false
+    },
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 137,
+     "message": "`headline` has a comment to clean up: at lines 137–138 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": "headline",
+     "rule_version": "2",
+     "concern_probability": 0.83,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 137,
+       "end_line": 138,
+       "symbol": "headline"
+      }
+     ],
+     "quote": "/// Status, gate, scope and cost on one line; for a dry run, the planned\n/// requests and the cost of those the cache does not answer.\n",
+     "fingerprint": "d9fd46abc3e8075bd67e31f9cd50c6d17995271f4ce8456431ef001d8acc63b5",
+     "rank": 0.9118481995945311,
+     "baselined": false
+    },
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 288,
+     "message": "`emit_context_load` has a comment to clean up: at line 288 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": "emit_context_load",
+     "rule_version": "2",
+     "concern_probability": 0.95,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 288,
+       "end_line": 288,
+       "symbol": "emit_context_load"
+      }
+     ],
+     "quote": "/// Estimated tokens each harness loads at session start, then loading facts.\n",
+     "fingerprint": "0c489984d06d9b262fe2219500c4785e94813d5e7d2a16fd1f433dab240e7f3a",
+     "rank": 0.658489821531948,
+     "baselined": false
+    },
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 255,
+     "message": "`emit_summary` has a comment to clean up: at line 255 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": "emit_summary",
+     "rule_version": "2",
+     "concern_probability": 0.8600000000000001,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 255,
+       "end_line": 255,
+       "symbol": "emit_summary"
+      }
+     ],
+     "quote": "/// Counts of undecided, unsent and failed files, and skip reasons.\n",
+     "fingerprint": "b0d9560615fa227f636fd476f31ea6a9f55184ac8a9fa2f5b96a2a179248b91f",
+     "rank": 0.596106575281553,
+     "baselined": false
+    },
+    {
+     "rule": "documentation/comments",
+     "strength": "note",
+     "line": 181,
+     "message": "`ranked` has a comment to clean up: at line 181 it repeats the code.",
+     "action": "Optional: delete, shorten or rewrite it",
+     "symbol": "ranked",
+     "rule_version": "2",
+     "concern_probability": 0.8200000000000001,
+     "locations": [
+      {
+       "path": "src/output.rs",
+       "start_line": 181,
+       "end_line": 181,
+       "symbol": "ranked"
+      }
+     ],
+     "quote": "/// Every finding with its file's path, highest rank first.\n",
+     "fingerprint": "8c4ad9aa47c3a7691f73eb65d7626a0ed6c93e6d3c97594937d2567542df2b11",
+     "rank": 0.5683806880591552,
+     "baselined": false
+    }
+   ],
+   "dimensions": {
+    "comments": {
+     "status": "note",
+     "concern_probability": 0.95,
+     "decision_basis": "15 comments judged: 4 note, 11 clear.",
+     "rule_version": "2",
+     "units": {
+      "judged": 15,
+      "review": 0,
+      "consider": 0,
+      "note": 4,
+      "clear": 11,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "file_organization": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "1 outline judged: 1 clear.",
+     "rule_version": "18",
+     "units": {
+      "judged": 1,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 1,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "function_simplification": {
+     "status": "note",
+     "concern_probability": 0.88,
+     "decision_basis": "14 functions judged: 2 note, 12 clear. 4 functions too small to judge.",
+     "rule_version": "14",
+     "units": {
+      "judged": 14,
+      "review": 0,
+      "consider": 0,
+      "note": 2,
+      "clear": 12,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 4,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "hardcoded_values": {
+     "status": "consider",
+     "concern_probability": 0.8700000000000001,
+     "decision_basis": "13 value units judged: 1 consider, 2 note, 10 clear.",
+     "rule_version": "4",
+     "units": {
+      "judged": 13,
+      "review": 0,
+      "consider": 1,
+      "note": 2,
+      "clear": 10,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "injection": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "17 security units judged: 17 clear.",
+     "rule_version": "6",
+     "units": {
+      "judged": 17,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 17,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "sensitive_data": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "17 security units judged: 17 clear.",
+     "rule_version": "5",
+     "units": {
+      "judged": 17,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 17,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "shared_logic": {
+     "status": "review",
+     "concern_probability": 0.86,
+     "decision_basis": "1 candidate pair judged: 1 review.",
+     "rule_version": "19",
+     "units": {
+      "judged": 1,
+      "review": 1,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "test_redundancy": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No test pairs to judge.",
+     "rule_version": "3",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "test_value": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "2 tests judged: 2 clear.",
+     "rule_version": "5",
+     "units": {
+      "judged": 2,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 2,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "unsafe_settings": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "17 security units judged: 17 clear.",
+     "rule_version": "4",
+     "units": {
+      "judged": 17,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 17,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    }
+   },
+   "input_tokens": 66999,
+   "output_tokens": 3877
+  },
+  {
+   "path": "src/tests/mod.rs",
+   "role": "test",
+   "status": "uncertain",
+   "cached": false,
+   "model": "jev-1.13.0",
+   "error": null,
+   "findings": [],
+   "dimensions": {
+    "file_organization": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "1 outline judged: 1 clear.",
+     "rule_version": "18",
+     "units": {
+      "judged": 1,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 1,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "function_simplification": {
+     "status": "clear",
+     "concern_probability": 0.0,
+     "decision_basis": "8 functions judged: 8 clear. 6 functions too small to judge.",
+     "rule_version": "14",
+     "units": {
+      "judged": 8,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 8,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 6,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "shared_logic": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No candidate pairs to judge.",
+     "rule_version": "19",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "test_redundancy": {
+     "status": "not-applicable",
+     "concern_probability": 0.0,
+     "decision_basis": "No test pairs to judge.",
+     "rule_version": "3",
+     "units": {
+      "judged": 0,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 0,
+      "uncertain": 0,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    },
+    "test_value": {
+     "status": "uncertain",
+     "concern_probability": 0.23,
+     "decision_basis": "7 tests judged: 6 clear, 1 uncertain.",
+     "rule_version": "5",
+     "units": {
+      "judged": 7,
+      "review": 0,
+      "consider": 0,
+      "note": 0,
+      "clear": 6,
+      "uncertain": 1,
+      "needs_context": 0,
+      "too_small": 0,
+      "omitted": 0,
+      "covered": 0
+     }
+    }
+   },
+   "input_tokens": 25324,
+   "output_tokens": 884
+  },
+  {
+   "path": "README.md",
+   "role": "docs",
+   "status": "skipped",
+   "cached": false,
+   "model": null,
+   "error": "Outside upload_allow/upload_deny; not judged.",
+   "findings": [],
+   "dimensions": {},
+   "input_tokens": 0,
+   "output_tokens": 0
+  }
+ ],
+ "changes": [
+  {
+   "rule": "documentation/comments",
+   "path": "src/options/commands.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "persistent",
+   "reason": "The same finding remains",
+   "fingerprint": "5fb29bb3e2212df289b9748c9fd60c1599b13459df84a0400841d985e5a18823"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/options/mod.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "58c86ae408c99452fa1af1684beb3d10df53e78c32cd7ba8bb92f1a13f1ab928"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/options/mod.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "8cbf468d2d64d25f58ccde803b1924b6d4648fe6ccd968aa1e37d19e23a2f62d"
+  },
+  {
+   "rule": "maintainability/shared-logic",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "c2411e834cced1c5f56c8a68b9a04e95ab9ba7bb8781e3879793745a50f202ad"
+  },
+  {
+   "rule": "maintainability/hardcoded-values",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "496b58069e9ed18abb10136b9f3b6e4ebdd5b892b41c5c5a2131d6f8c407ced0"
+  },
+  {
+   "rule": "maintainability/function-simplification",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "362c563e25a7e440960c9bd2d433d974d9fd9d1a201479921f4ae916948b39a7"
+  },
+  {
+   "rule": "maintainability/function-simplification",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "84dce89ad1b06817330b51a91db2a8cbad9b360c057348791ff356f5e5c42448"
+  },
+  {
+   "rule": "maintainability/hardcoded-values",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "744eb1bc38d3e8c0f54ae00890a7d4e77466683e5eb1252cb1e98bcec75c3e64"
+  },
+  {
+   "rule": "maintainability/hardcoded-values",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "b2f2cf1e5db49630ef53b471139ab8e8be7e8fa3f02b5017f99c4980c2c3beba"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "d9fd46abc3e8075bd67e31f9cd50c6d17995271f4ce8456431ef001d8acc63b5"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "0c489984d06d9b262fe2219500c4785e94813d5e7d2a16fd1f433dab240e7f3a"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "b0d9560615fa227f636fd476f31ea6a9f55184ac8a9fa2f5b96a2a179248b91f"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/output.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "introduced",
+   "reason": "New since the previous snapshot",
+   "fingerprint": "8c4ad9aa47c3a7691f73eb65d7626a0ed6c93e6d3c97594937d2567542df2b11"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/manual.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "non-comparable",
+   "reason": "The file was not judged in this snapshot, or rubric or model changed",
+   "fingerprint": "a77714c33851e41910555dfcaf22fb82428e5636fd58aade6a9a499a2f03ed6b"
+  },
+  {
+   "rule": "documentation/comments",
+   "path": "src/command.rs",
+   "previous_path": null,
+   "previous_generation": 20,
+   "state": "non-comparable",
+   "reason": "The file was not judged in this snapshot, or rubric or model changed",
+   "fingerprint": "deaef5f7bc17022e28d45da241f86648ccbdb275abb3e39808372bbd9f1e9e66"
+  }
+ ],
+ "rules": [
+  "maintainability/file-organization",
+  "maintainability/function-simplification",
+  "maintainability/shared-logic",
+  "maintainability/hardcoded-values",
+  "security/injection",
+  "security/sensitive-data",
+  "security/unsafe-settings",
+  "security/access-control",
+  "security/workflows",
+  "tests/value",
+  "tests/redundancy",
+  "documentation/agent-context",
+  "documentation/large-docs",
+  "documentation/staleness",
+  "documentation/duplication",
+  "documentation/comments"
+ ]
+}
