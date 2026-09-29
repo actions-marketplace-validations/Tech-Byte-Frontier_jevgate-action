@@ -18,7 +18,7 @@ jobs:
       - uses: Tech-Byte-Frontier/jevgate-action@v1
         with:
           api-key: ${{ secrets.TYPESAFE_API_KEY }}
-          version: 0.30.0
+          version: 0.31.0
 ```
 
 The action installs a release binary (checked against its SHA-256), keeps JevGate's answer cache in the Actions cache so unchanged code costs nothing (and removes one the pull request commits, whose answers could clear its own code), and runs `jevgate check --base <pull request base> --format github`. It needs no Rust toolchain and runs on Linux, macOS and Windows runners.
@@ -90,7 +90,7 @@ OpenRouter and Vercel AI Gateway also serve Jev. With JevGate 0.26.0 or later, p
         with:
           api-key: ${{ secrets.OPENROUTER_API_KEY }}
           api-key-kind: openrouter # or vercel
-          version: 0.30.0
+          version: 0.31.0
 ```
 
 With an older version the check stops with an error instead of running without a key.
